@@ -20,7 +20,7 @@ bos_offmap_chapter_logic = {
 						days = 1095
 					}
 				}
-				75 = {ffze
+				75 = {
 					country_event = {
 						id = nf_brotherhood_off_map_chapter_logic.3 #Project Purity
 						days = 1095

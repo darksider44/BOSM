@@ -1,0 +1,14 @@
+
+
+BOSM_help = {
+	icon = GFX_decision_terminal
+	picture = GFX_decision_cat_picture_loid_ekt_tabel
+	visible_when_empty = yes
+	allowed = {
+		has_country_flag = BOSM
+	}
+	visible = {
+		has_country_flag = BOSM
+	}
+	priority = 100
+}

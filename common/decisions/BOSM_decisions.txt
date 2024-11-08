@@ -1,0 +1,20 @@
+BOSM_decision = {
+
+}
+
+BOSM_help_decision = {
+	available = {
+		has_country_flag = BOSM
+	}
+	target_root_trigger = {
+		has_country_flag = BOSM
+	}
+	targets = {BOS MXC MOJ ACH TCA WBH MNC SHI GRD BMW BGF BLN TBH IBH MLA}
+	target_trigger = {
+		FROM = {
+			has_country_flag = BOSM
+		}
+	}
+	cost = 0
+
+}

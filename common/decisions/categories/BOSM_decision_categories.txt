@@ -1,24 +1,11 @@
 BOSM_politic = {
 	icon = GFX_decision_terminal
 	allowed = {
-		OR = {
-			tag = BOS
-			tag = MXC
-			tag = MOJ
-			#Alamo ACH need to be applied on spawn
-			tag = TCA
-			tag = WBH
-			tag = MNC
-			tag = SHI
-			tag = GRD
-			tag = BMW			#Rustbelt
-			tag = BGF			#Fountain
-			tag = BLN			# East coast
-			tag = TBH
-			#IBH and MLA need to apply when one spawn and the second achieve focus to join midwest
-		}
+		tag = BOS
 	}
-	visible_when_empty = yes
+	visible = {
+		always = yes
+	}
 	priority = 800
 }
 
@@ -42,6 +29,9 @@ BOSM_help = {
 			tag = TBH
 			#IBH and MLA need to apply when one spawn and the second achieve focus to join midwest
 		}
+	}
+	visible = {
+		always = yes
 	}
 	priority = 100
 }

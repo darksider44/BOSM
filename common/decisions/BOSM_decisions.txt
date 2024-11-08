@@ -1,20 +1,41 @@
-BOSM_decision = {
+BOSM_politic = {
+	BOSM_test = {
+			fire_only_once = no
+			#days_remove = 30
+			icon = GFX_decision_teapot
+			ai_will_do = {
+				factor = 100
+			}
+			available = {
+				always = yes
+			}
+			visible = {
+				always = yes
+			}
 
+	}
+	BOSM_1 = {
+
+	}
 }
 
-BOSM_help_decision = {
-	available = {
-		has_country_flag = BOSM
-	}
-	target_root_trigger = {
-		has_country_flag = BOSM
-	}
-	targets = {BOS MXC MOJ ACH TCA WBH MNC SHI GRD BMW BGF BLN TBH IBH MLA}
-	target_trigger = {
-		FROM = {
+BOSM_help = {
+	BOSM_help_decision = {
+		available = {
 			has_country_flag = BOSM
 		}
+		visible = {
+			has_country_flag = BOSM
+		}
+		target_root_trigger = {
+			has_country_flag = BOSM
+		}
+		targets = {BOS MXC MOJ ACH TCA WBH MNC SHI GRD BMW BGF BLN TBH IBH MLA}
+		target_trigger = {
+			FROM = {
+				has_country_flag = BOSM
+			}
+		}
+		cost = 0
 	}
-	cost = 0
-
 }

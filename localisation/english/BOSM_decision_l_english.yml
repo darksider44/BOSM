@@ -1,0 +1,6 @@
+﻿l_english:
+ BOSM_politic:0 "TEST"
+ BOSM_test:0 "test2"
+ BOSM_help:0 "Brotherhood of Steel"
+ BOSM_help_decision_man:0 "Send personnel to [FROM.capital.GetName]"
+ BOSM_help_decision_weapon:0 "Send weapon to [FROM.capital.GetName]"

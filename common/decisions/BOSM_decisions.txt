@@ -20,10 +20,7 @@ BOSM_politic = {
 }
 
 BOSM_help = {
-	BOSM_help_decision = {
-		available = {
-			has_country_flag = BOSM
-		}
+	BOSM_help_decision_man = {
 		visible = {
 			has_country_flag = BOSM
 		}
@@ -37,5 +34,41 @@ BOSM_help = {
 			}
 		}
 		cost = 0
+		days_re_enable = 5
+		complete_effect = {
+			FROM = {
+				add_manpower = 500
+			}
+			ROOT = {
+				add_manpower = -500
+			}
+			
+		}
+	}
+	BOSM_help_decision_weapon = {
+		visible = {
+			has_country_flag = BOSM
+		}
+		target_root_trigger = {
+			has_country_flag = BOSM
+		}
+		targets = {BOS MXC MOJ ACH TCA WBH MNC SHI GRD BMW BGF BLN TBH IBH MLA}
+		target_trigger = {
+			FROM = {
+				has_country_flag = BOSM
+			}
+		}
+		cost = 0
+		days_re_enable = 5
+		complete_effect = {
+			ROOT = {
+				send_equipment = {
+					equipment = infantry_equipment
+					amount = 1000
+					target = FROM
+				}
+			}
+			
+		}
 	}
 }

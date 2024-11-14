@@ -1,0 +1,183 @@
+@WINDOW_X_POS = -606
+@WINDOW_Y_POS = 78
+@WINDOW_SHOW_X_POS = -6
+@WINDOW_SHOW_Y_POS = 78
+@WINDOW_SIZE_X = 520
+@WINDOW_SIZE_Y = 550
+
+guiTypes = {
+	containerWindowType = {
+		name = "fallout_brotherhood_ledger_window"
+		position = { x = @WINDOW_X_POS y = @WINDOW_Y_POS }
+		show_position = { x = @WINDOW_SHOW_X_POS y = @WINDOW_SHOW_Y_POS }
+		size = { width = @WINDOW_SIZE_X height = @WINDOW_SIZE_Y }
+
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 300
+
+		show_sound = menu_open_window
+
+		background = {
+			name = "Background"
+			#clipping = yes
+		}
+
+		iconType = {
+			name = "bos_background"
+			spriteType = "GFX_brotherhood_ledger_background"
+			position = { x = 0 y = 10 }
+		}
+
+		containerWindowType = {
+			name = "frame_window"
+			position = { x = 0 y = 0 }
+			show_position = { x = 0 y = 23 }
+			size = { width = 101%% height = 101%% }
+
+			show_animation_type = decelerated
+			hide_animation_type = accelerated
+			animation_time = 1
+
+			background = {
+				name = "background_2"
+				spriteType = "GFX_tiled_generic_bg_1"
+			}
+		}
+
+		iconType = {
+			name = "title_bg"
+			spriteType = "GFX_header_bg"
+			position = { x = 5 y = 7 }
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = { x = 75 y = 12}
+			font = "fallout_decayed_24"
+			text = "FALLOUT_BROTHERHOOD_LEDGER_TAB"
+			maxWidth = 400
+			maxHeight = 20
+			fixedsize = yes
+		}
+
+		buttonType = {
+			name = "close_button"
+			spriteType = "GFX_closebutton"
+			position = { x = -32 y = 9 }
+			clicksound = click_close
+			orientation = upper_right
+			shortcut = "ESCAPE"
+			pdx_tooltip = "bos_ledger_close"
+		}
+
+		buttonType = {
+			name = "brotherhood_symbol"
+			spriteType = "GFX_brotherhood_ledger_symbol"
+			position = { x = 190 y = 50 }
+		}
+
+		containerWindowType = {
+			name = "text_box_bos"
+			position = { x = 150 y = 200 }
+			size = { width = 200 height = 25 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiled_generic_bg_1"
+			}
+			instantTextBoxType = {
+				name = "asdasd"
+				position = { x = -100 y = -18 }
+				font = "hoi_16mbs"
+				format = center
+				text = "The Brotherhood of Steel Ledger"
+				maxWidth = 400
+				maxHeight = 61
+				fixedsize = yes
+				vertical_alignment = center
+			}
+		}
+
+		gridboxtype = {
+			name = "bos_ledger_member_gridbox" #The ledger only shows specific countries we are talking about here, not necessairly every brotherhood country.
+			position = { x = 5 y = 70 }
+			size = { width = 100%% height = 100%% }
+			slotsize = { width = 190 height = 41 }
+			add_horizontal = yes
+			max_slots_horizontal = 2
+			format = "UPPER_LEFT"
+			padding = { bottom = 3 }
+		}
+	}
+
+	containerWindowType = {
+		name = "bos_ledger_members_entry"
+		position = { x = 60 y = 160 }
+		size = { width = 200 height = 41 }
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tiled_generic_bg_1"
+		}
+
+		containerWindowType = {
+			name = "member_flag_window"
+			position = { x = 3 y = 5 }
+			size = { width = 120%% height = 100%% }
+
+			buttonType = {
+				name = "member_flag"
+				spriteType = "GFX_flag_small2"
+				position = { x = 2 y = 2 }
+				pdx_tooltip = "FALLOUT_BROTHERHOOD_LEDGER_TOOLTIP_COUNTRY"
+				pdx_tooltip_delayed = "BOS_LEDGER_TT_DELAYED"
+			}
+
+			buttonType = {
+				name = "test_flag"
+				spriteType = "GFX_flag_small2"
+				position = { x = 160 y = 2 }
+				pdx_tooltip = "FALLOUT_BROTHERHOOD_LEDGER_TOOLTIP_COUNTRY"
+				pdx_tooltip_delayed = "BOS_LEDGER_TT_DELAYED"
+			}
+
+			
+
+			iconType = {
+				name = "member_flag_frame"
+				spriteType = "GFX_small_flag_frame_thin"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+
+			#iconType = {
+			#	name = "member_icon"
+			#	position = { x = 0 y = 2 }
+			#	spriteType = "GFX_hre_elector_icon"
+			#	alwaystransparent = yes
+			#}
+
+			#iconType = {
+			#	name = "member_emperor_icon"
+			#	position = { x = 22 y = 15 }
+			#	spriteType = "GFX_hre_emperor_icon"
+			#	alwaystransparent = yes
+			#	scale = 0.5
+			#}
+		}
+
+		instantTextBoxType = {
+			name = "member_name"
+			position = { x = 55 y = 1 }
+			font = "hoi_16mbs"
+			format = left
+			text = "[This.GetName]"
+			maxWidth = 115
+			maxHeight = 40
+			fixedsize = yes
+			vertical_alignment = center
+			pdx_tooltip = "FALLOUT_BROTHERHOOD_LEDGER_TOOLTIP_COUNTRY"
+		}
+	}
+}
